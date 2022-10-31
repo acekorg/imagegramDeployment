@@ -1,0 +1,5 @@
+apiVersion: v2
+name: imagegram
+description: A Helm chart for kubernetes configuration of imagegram
+type: application
+version: 0.0.1-SNAPSHOT

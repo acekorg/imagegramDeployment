@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "imagegram.app.name" . }}-backend-svc
+  namespace: imagegram-{{.Values.environment}}
+  labels:
+    app.kubernetes.io/name: {{ include "imagegram.app.name" . }}-backend-svc
+spec:
+  selector:
+    app.kubernetes.io/name: {{ include "imagegram.app.name" . }}
+  ports:
+    - port: 80
+      targetPort: 8080

@@ -1,0 +1,18 @@
+application_name: imagegram
+scaling_strategy:
+  type: RollingUpdate
+environment: test
+numberOfReplicas: 1
+subdomain: imagegram-test
+deployment_host: test.aleksandar.com
+docker:
+  imageName: hub.docker.com/r/acekorg/imagegram
+  imageTag: latest
+  imagePullPolicy: Always
+  resources:
+    requests:
+      memory: 100Mi
+      cpu: 100m
+    limits:
+      memory: 300Mi
+      cpu: 200m
